@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservice.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://webservice.com" xmlns:intf="http://webservice.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://webservice.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="createStudent">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+      <element name="department" type="xsd:string"/>
+      <element name="emailId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createStudentResponse">
+    <complexType>
+     <sequence>
+      <element name="createStudentReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="createStudentResponse">
+
+      <wsdl:part element="impl:createStudentResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createStudentRequest">
+
+      <wsdl:part element="impl:createStudent" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="StudentSrv">
+
+      <wsdl:operation name="createStudent">
+
+         <wsdl:input message="impl:createStudentRequest" name="createStudentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createStudentResponse" name="createStudentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="StudentSrvSoapBinding" type="impl:StudentSrv">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createStudent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createStudentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createStudentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="StudentSrvService">
+
+      <wsdl:port binding="impl:StudentSrvSoapBinding" name="StudentSrv">
+
+         <wsdlsoap:address location="http://localhost:8080/AjaxCurdjTableServlet/services/StudentSrv"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
