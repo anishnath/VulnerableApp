@@ -34,11 +34,12 @@ public class Controller extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		String action = request.getParameter("action");
+		
 		List<Student> studentList = new ArrayList<Student>();
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		response.setContentType("application/json");
-
 		if (action != null) {
+			
+			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			response.setContentType("application/json");
 			try {
 				if (action.equals("list")) {
 					// Fetch Data from Student Table
@@ -103,6 +104,22 @@ public class Controller extends HttpServlet {
 						response.getWriter().print(jsonArray);
 					}
 				}
+				
+				else if (action.equals("findByName")) {
+					// Delete record
+					if (request.getParameter("studentId") != null) {
+						int studentId = Integer.parseInt(request.getParameter("studentId"));
+						dao.deleteStudent(studentId);
+
+						// Return in the format required by jTable plugin
+						JSONROOT.put("Result", "OK");
+
+						// Convert Java Object to Json
+						String jsonArray = gson.toJson(JSONROOT);
+						response.getWriter().print(jsonArray);
+					}
+				}
+				
 			} catch (Exception ex) {
 				JSONROOT.put("Result", "ERROR");
 				JSONROOT.put("Message", ex.getMessage());
@@ -110,5 +127,7 @@ public class Controller extends HttpServlet {
 				response.getWriter().print(error);
 			}
 		}
+		
+		
 	}
 }

@@ -1,10 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+	if (request.getSession().getAttribute("user") == null) {
+		response.sendRedirect("login.jsp");
+		return;
+	}
+%>
 <!DOCTYPE>
 <html>
 <head>
-<title>CRUD operations using jTable in J2EE</title>
+<title>Cross Site Example Creating the student</title>
 <!-- Include one of jTable styles. -->
 <link href="css/metro/blue/jtable.css" rel="stylesheet" type="text/css" />
-<link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet"
+	type="text/css" />
 <!-- Include jTable script file. -->
 <script src="js/jquery-1.8.2.js" type="text/javascript"></script>
 <script src="js/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>
@@ -50,12 +60,30 @@
 	});
 </script>
 
+
 </head>
 <body>
-<div style="width: 80%; margin-right: 10%; margin-left: 10%; text-align: center;">
 
-		<h4>AJAX based CRUD operations using jTable in J2ee</h4>
-		<div id="StudentTableContainer"></div>
-	</div>
+	<section id="body" class="width">
+		<%@ include file="left.jsp"%>
+		<section id="content" class="column-right">
+
+			<article>
+
+
+
+
+				<h4>Create the Student</h4>
+				<div id="StudentTableContainer"></div>
+				</div>
+			</article>
+			<%@ include file="footer.jsp"%>
+
+		</section>
+
+
+
+	</section>
+
 </body>
 </html>

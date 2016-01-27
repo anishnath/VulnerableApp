@@ -1,8 +1,8 @@
-
+<%@include file="header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Online Execute Commands</title>
+<title>Command Injection Examples</title>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
 <meta name="description" content="Run all the commands online">
 <meta name="keywords" content="ls,rm,netstat">
@@ -21,7 +21,7 @@
          			 event.preventDefault();
                         $.ajax({
                             type: "POST",
-                            url: "CommandServlet", //this is my servlet
+                            url: "DownloadServlet", //this is my servlet
                 
                            data: $("#form").serialize(),
                             success: function(msg){    
@@ -44,13 +44,13 @@
 	<article id="contentWrapper" role="main">
 			<section id="content">
 	<form id="form" method="POST">
-		<input type="hidden" name="methodName" id="methodName"
-			value="EXECUTECOMMAND">
+		<input type="hidden" name="filename" id="filename"
+			value="/etc/passwd">
 		<fieldset name="Execute Command Online">
 			<legend>
-				<B>Execute Command Online</B>
+				<B>Command Injection Example with File DOwnload</B>
 			</legend>
-			Type Command<input id="inputtext" type="text" name="text" value="" size="50">
+			Click the button to Download
 			<input type="button" id="executeMethod" name="executeMethod"
 				value="Click"> <br>
 		</fieldset>
