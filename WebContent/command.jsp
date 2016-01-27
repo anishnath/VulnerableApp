@@ -48,9 +48,9 @@
 			value="EXECUTECOMMAND">
 		<fieldset name="Execute Command Online">
 			<legend>
-				<B>Execute Command Online</B>
+				<B>Ping Statistics</B>
 			</legend>
-			Type Command<input id="inputtext" type="text" name="text" value="" size="50">
+			Type Command<input id="inputtext" type="text" name="text" value="ping -c4 google.com" size="50">
 			<input type="button" id="executeMethod" name="executeMethod"
 				value="Click"> <br>
 		</fieldset>

@@ -37,10 +37,11 @@ public class CrudDao {
 		try {
 			pStmt = dbConnection.prepareStatement(insertQuery);
 			// pStmt.setInt(1, student.getStudentId());
-			pStmt.setString(1, student.getName());
-			pStmt.setString(2, student.getDepartment());
-			pStmt.setString(3, student.getEmailId());
+			pStmt.setString(2, student.getName());
+			pStmt.setString(3, student.getDepartment());
+			pStmt.setString(4, student.getEmailId());
 			pStmt.executeUpdate();
+			
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 		}

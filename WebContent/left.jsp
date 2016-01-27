@@ -8,10 +8,11 @@
 	<nav id="mainnav">
 		<ul>
 			<li class="selected-item"><a href="main.jsp">Home</a></li>
-			<li><a href="command.jsp">command Injection</a></li>
+			<li><a href="command.jsp">Command Injection</a></li>
+			<li><a href="command-injection.jsp">Command Injection File Download</a></li>
 			<li><a href="upload.jsp">Unrestricted File Upload</a></li>
 			<li><a href="cross-site.jsp">XSS</a></li>
-			<li><a href="command-injection.jsp">commandInjection</a></li>
+			<li><a href="httpmethod.jsp">HTTP Method Check</a></li>
 			<li><a href="#">CSRF</a></li>
 		</ul>
 	</nav>

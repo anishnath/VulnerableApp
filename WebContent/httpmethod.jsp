@@ -40,24 +40,24 @@
 	<div id="loading" style="display: none;">
 		<img src="css/images/712.GIF" alt="" />Loading!
 	</div>
+	    Status Code: 200 OK
+    Access-Control-Allow-Headers: Content-Type
+    Access-Control-Allow-Methods: GET,DELETE,POST,<b>TRACE<b>,OPTIONS,PUT,HEAD
+    Access-Control-Allow-Origin: *
+    Access-Control-Max-Age: 86400
+    Allow: GET, HEAD, POST, TRACE, OPTIONS
 	<article id="contentWrapper" role="main">
 			<section id="content">
-	<form id="form" method="POST">
-		<input type="hidden" name="filename" id="filename"
-			value="/etc/passwd">
-		<fieldset name="Execute Command Online">
-			<legend>
-				<B>Command Injection Example with File DOwnload</B>
-			</legend>
-			Click the button to Download
-			<input type="button" id="executeMethod" name="executeMethod"
-				value="Click"> <br>
-		</fieldset>
-		<div id="output"></div>
-	</form>
+
+
+
+
+
+
+
 		</section>
 		</article>
-		
+
 	</div>
 </body>
 </html>
