@@ -13,6 +13,7 @@
 			<li><a href="upload.jsp">Unrestricted File Upload</a></li>
 			<li><a href="cross-site.jsp">XSS</a></li>
 			<li><a href="httpmethod.jsp">HTTP Method Check</a></li>
+			<li><a href="clickjack.jsp">Clickjacking Demo</a></li>
 			<li><a href="#">CSRF</a></li>
 		</ul>
 	</nav>

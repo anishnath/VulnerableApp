@@ -44,7 +44,7 @@
 			<section id="content">
 	<form id="form" method="POST">
 		<input type="hidden" name="filename" id="filename"
-			value="/etc/passwd">
+			value="/temp.txt">
 		<fieldset name="Execute Command Online">
 			<legend>
 				<B>Command Injection Example with File DOwnload</B>

@@ -8,11 +8,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import com.jdbc.DBUtility;
 import com.model.Student;
 
 public class CrudDao {
+	
+	private static Random random = new Random();
 
 	private Connection dbConnection;
 	private PreparedStatement pStmt;
@@ -33,10 +36,15 @@ public class CrudDao {
 	}
 
 	public void addStudent(Student student) {
-		String insertQuery = "INSERT INTO STUDENT( NAME, " + "DEPARTMENT, EMAIL) VALUES (?,?,?)";
+		
+		int x =random.nextInt();
+		
+		String insertQuery = "INSERT INTO STUDENT( STUDENTID,NAME, " + "DEPARTMENT, EMAIL) VALUES (?,?,?,?)";
+		//System.out.println(insertQuery);
+		
 		try {
 			pStmt = dbConnection.prepareStatement(insertQuery);
-			// pStmt.setInt(1, student.getStudentId());
+			pStmt.setInt(1, x);
 			pStmt.setString(2, student.getName());
 			pStmt.setString(3, student.getDepartment());
 			pStmt.setString(4, student.getEmailId());

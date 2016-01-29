@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Online Execute Commands</title>
+<title>Click Jacking Example</title>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
 <meta name="description" content="Run all the commands online">
 <meta name="keywords" content="ls,rm,netstat">
@@ -48,11 +48,13 @@
 			value="EXECUTECOMMAND">
 		<fieldset name="Execute Command Online">
 			<legend>
-				<B>Ping Statistics</B>
+				<B>Click Jack Example</B>
 			</legend>
-			Type Command<input id="inputtext" type="text" name="text" readonly="readonly" value="ping -c4 google.com" size="50">
-			<input type="button" id="executeMethod" name="executeMethod"
-				value="Click"> <br>
+			ClickJacking Demo This type of attack occurs when a malicious site
+tricks a user into clicking on a concealed element of another site which they
+have loaded in a hidden frame or iframe.
+			<br>
+			<input type="button" onclick="window.open('http://54.88.114.64/clickjack.html');" value="Clickjack" /> <br>
 		</fieldset>
 		<div id="output"></div>
 	</form>

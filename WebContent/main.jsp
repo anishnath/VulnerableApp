@@ -44,11 +44,11 @@ License: Creative Commons Attribution
 					<li>XSS</li>
 					<li>CSRF</li>
 					<li>Unrestricted File Upload</li>
-					<li>Accont Lock out</li>
 					<li>Command Injection</li>
 					<li>Heartbleed</li>
 					<li>SSL Poddle/BEAST Check</li>
-					<li>HTTP TRACE / TRACK Methods Enabled</li>
+					<li>HTTP Methods Finding</li>
+					<li>Clickjacking</li>
 				</ul>
 			</article>
 			<footer class="clear">
