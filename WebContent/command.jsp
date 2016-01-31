@@ -36,12 +36,13 @@
     </script>
 </head>
 <body>
-<a href="main.jsp">Home</a>
+
 <div id="page">
 	<div id="loading" style="display: none;">
 		<img src="css/images/712.GIF" alt="" />Loading!
 	</div>
 	<article id="contentWrapper" role="main">
+	<%@ include file="Intro.jsp" %> 
 			<section id="content">
 	<form id="form" method="POST">
 		<input type="hidden" name="methodName" id="methodName"

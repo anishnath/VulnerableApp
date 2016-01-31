@@ -3,8 +3,8 @@
 <head>
 <title>Command Injection Examples</title>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-<meta name="description" content="Run all the commands online">
-<meta name="keywords" content="ls,rm,netstat">
+<meta name="description" content="owsap,commandinjection,AI injection,XSS">
+<meta name="keywords" content="ls,rm,netstat,owsap,commandinjection,AI injection,XSS">
 <%@ include file="include_css.jsp" %> 
 <script type="text/javascript">
         $(document).ready(function() {
@@ -35,13 +35,18 @@
     </script>
 </head>
 <body>
-<a href="main.jsp">Home</a>
+
 <div id="page">
+
 	<div id="loading" style="display: none;">
 		<img src="css/images/712.GIF" alt="" />Loading!
 	</div>
 	<article id="contentWrapper" role="main">
+	<%@ include file="Intro.jsp" %> 
 			<section id="content">
+
+
+
 	<form id="form" method="POST">
 		<input type="hidden" name="filename" id="filename"
 			value="/temp.txt">

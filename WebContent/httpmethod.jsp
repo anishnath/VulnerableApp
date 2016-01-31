@@ -35,24 +35,25 @@
     </script>
 </head>
 <body>
-<a href="main.jsp">Home</a>
+
 <div id="page">
 	<div id="loading" style="display: none;">
 		<img src="css/images/712.GIF" alt="" />Loading!
 	</div>
-	    Status Code: 200 OK
-    Access-Control-Allow-Headers: Content-Type
-    Access-Control-Allow-Methods: GET,DELETE,POST,<b>TRACE<b>,OPTIONS,PUT,HEAD
-    Access-Control-Allow-Origin: *
-    Access-Control-Max-Age: 86400
-    Allow: GET, HEAD, POST, TRACE, OPTIONS
+	<%@ include file="Intro.jsp" %> 
+	   
 	<article id="contentWrapper" role="main">
 			<section id="content">
 
 
 
 
-
+ Status Code: 200 OK
+    Access-Control-Allow-Headers: Content-Type
+    Access-Control-Allow-Methods: GET,DELETE,POST,<b>TRACE<b>,OPTIONS,PUT,HEAD
+    Access-Control-Allow-Origin: *
+    Access-Control-Max-Age: 86400
+    Allow: GET, HEAD, POST, TRACE, OPTIONS
 
 
 		</section>

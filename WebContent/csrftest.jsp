@@ -4,7 +4,7 @@
 <head>
 <title>Click Jacking Example</title>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-<meta name="description" content="Run all the commands online">
+<meta name="description" content="CSRF,Cr">
 <meta name="keywords" content="ls,rm,netstat">
 <%@ include file="include_css.jsp" %> 
 <script type="text/javascript">
@@ -42,19 +42,22 @@
 		<img src="css/images/712.GIF" alt="" />Loading!
 	</div>
 	<article id="contentWrapper" role="main">
+	<%@ include file="Intro.jsp" %> 
 			<section id="content">
 	<form id="form" method="POST">
 		<input type="hidden" name="methodName" id="methodName"
 			value="EXECUTECOMMAND">
 		<fieldset name="Execute Command Online">
 			<legend>
-				<B>Click Jack Example</B>
+				<B>CSRF</B>
+				
+				A Cross-site request forgery hole is when a malicious site can cause a visitor's browser to make a request to your server<br> that causes a change on the server. The server thinks that because the request comes with the user's cookies, the user wanted to submit that form.
+
+				
 			</legend>
-			ClickJacking Demo This type of attack occurs when a malicious site
-tricks a user into clicking on a concealed element of another site which they
-have loaded in a hidden frame or iframe.
+
 			<br>
-			<input type="button" onclick="window.open('http://analytics-zariga.rhcloud.com/clickjack');" value="Click Here for Clickjack" /> <br>
+			<input type="button" onclick="window.open('http://analytics-zariga.rhcloud.com/csrf');" value="Click Here for CSRF" /> <br>
 		</fieldset>
 		<div id="output"></div>
 	</form>

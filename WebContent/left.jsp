@@ -1,7 +1,7 @@
 <aside id="sidebar" class="column-left">
 	<header>
 		<h1>
-			<a href="#">Vulnerable Web Application</a>
+			<a href="main.jsp">Vulnerable Web Application</a>
 		</h1>
 		<h2>Welcome to my ultimate guide for Web Application Testing!</h2>
 	</header>
@@ -14,7 +14,10 @@
 			<li><a href="cross-site.jsp">XSS</a></li>
 			<li><a href="httpmethod.jsp">HTTP Method Check</a></li>
 			<li><a href="clickjack.jsp">Clickjacking Demo</a></li>
-			<li><a href="#">CSRF</a></li>
+			<li><a href="csrftest.jsp">CSRF</a></li>
+			<li><a href="#">SQL Injection on Find</a></li>
+			<li><a href="#">SQL Injection on Login</a></li>
+			<li><a href="#">HTTPOnly Flag (Cookie Exploration)</a></li>
 		</ul>
 	</nav>
 </aside>
