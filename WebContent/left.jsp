@@ -15,8 +15,8 @@
 			<li><a href="httpmethod.jsp">HTTP Method Check</a></li>
 			<li><a href="clickjack.jsp">Clickjacking Demo</a></li>
 			<li><a href="csrftest.jsp">CSRF(Cross Site Request Forgery)</a></li>
+			<li><a href="login.jsp">SQL Injection on Login</a></li>
 			<li><a href="#">SQL Injection on Find</a></li>
-			<li><a href="#">SQL Injection on Login</a></li>
 			<li><a href="#">HTTPOnly Flag (Cookie Exploration)</a></li>
 		</ul>
 	</nav>

@@ -23,6 +23,7 @@ function httpOnlyCookie() {
 <body>
 
 <div id="page">
+<%@ include file="include.jsp"%>
 
 	<div id="loading" style="display: none;">
 		<img src="css/images/712.GIF" alt="" />Loading!

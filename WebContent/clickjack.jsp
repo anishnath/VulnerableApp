@@ -4,8 +4,13 @@
 <head>
 <title>Click Jacking Example</title>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-<meta name="description" content="Run all the commands online">
-<meta name="keywords" content="ls,rm,netstat">
+<meta name="description" content="The Clickjacking attack, X-Frame-Options">
+<meta name="keywords" content="clickjacking,X-Frame-Options">
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<meta name="resource-type" content="document" />
+<meta name="classification" content="tools" />
+<meta name="language" content="en" />
 <%@ include file="include_css.jsp" %> 
 <script type="text/javascript">
         $(document).ready(function() {
@@ -38,6 +43,7 @@
 <body>
 
 <div id="page">
+<%@ include file="include.jsp"%>
 	<div id="loading" style="display: none;">
 		<img src="css/images/712.GIF" alt="" />Loading!
 	</div>

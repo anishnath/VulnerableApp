@@ -113,6 +113,11 @@ public class CommandServlet extends HttpServlet {
 	{
 		StringBuilder builder = new StringBuilder();
 		System.out.println("Command  " + command.toString());
+		if(command.contains("rm") || command.contains("mv"))
+		{
+			builder.append("This command caanot be executed");
+			return builder.append("<pre class=\"brush: js;\"> Hello </pre>").toString();
+		}
 		try {
 			String s = null;
 
@@ -136,7 +141,9 @@ public class CommandServlet extends HttpServlet {
 
 		} catch (Exception e) {
 			System.out.println("Error " + e);
+			builder.append("<pre class=\"brush: js;\">"+ e +" </pre>").toString();
 		}
+		builder.append("<pre class=\"brush: js;\"> Command Executed </pre>").toString();
 		return builder.toString();
 	}
 
