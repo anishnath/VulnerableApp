@@ -11,10 +11,10 @@
 			<li><a href="command.jsp">Command Injection</a></li>
 			<li><a href="command-injection.jsp">Command Injection File Download</a></li>
 			<li><a href="upload.jsp">Unrestricted File Upload</a></li>
-			<li><a href="cross-site.jsp">XSS</a></li>
+			<li><a href="cross-site.jsp">XSS(Cross Site Scripting)</a></li>
 			<li><a href="httpmethod.jsp">HTTP Method Check</a></li>
 			<li><a href="clickjack.jsp">Clickjacking Demo</a></li>
-			<li><a href="csrftest.jsp">CSRF</a></li>
+			<li><a href="csrftest.jsp">CSRF(Cross Site Request Forgery)</a></li>
 			<li><a href="#">SQL Injection on Find</a></li>
 			<li><a href="#">SQL Injection on Login</a></li>
 			<li><a href="#">HTTPOnly Flag (Cookie Exploration)</a></li>

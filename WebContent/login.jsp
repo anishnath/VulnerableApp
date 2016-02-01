@@ -1,5 +1,6 @@
 <html>
     <head>
+    <meta name="google-site-verification" content="OUSAhTeh3pKSSwkrFtBsHkfe4i_sF_oM_DGi8Qq6PTM" />
         <title>Vulnerable Web Application login form</title>
     </head>
     <body>
