@@ -1,3 +1,23 @@
+/**
+ * 
+ * 
+ * Copyright (C) 2016 Anish Nath
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
 package com.servlet;
 
 import java.io.*;
@@ -33,11 +53,15 @@ public class LoginServlet extends HttpServlet {
 				long totalTime = endTime - startTime;
 				out.println("<b><u>Command </b></u>= LoggedIn Time" + "<br><font size=\"3\" color=\"blue\">" + totalTime
 						+ "</font><br>");
+				
+				request.setAttribute("name","<b><u>Command </b></u>= User Succesfully Logged-IN,In Time" + "<br><font size=\"3\" color=\"blue\">" + totalTime
+						+ "</font><br>");
+		        request.getRequestDispatcher("/sqlinjection1.jsp").forward(request, response);
 
 			} else {
-				RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
-				out.println("<font color=red>Either user name or password is wrong.</font>");
-				// rd.include(request, response);
+				
+				 request.setAttribute("name","<font color=red>Either user name or password is wrong.</font>");
+				 request.getRequestDispatcher("/sqlinjection1.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

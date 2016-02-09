@@ -54,6 +54,15 @@
     <url-pattern>/HTTPMethodExpose</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <servlet-name>HTTPOnly</servlet-name>
+    <servlet-class>com.servlet.HttpOnlyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HTTPOnly</servlet-name>
+    <url-pattern>/HTTPOnly</url-pattern>
+  </servlet-mapping>
+  
   <context-param>
     <description>Location to store uploaded file</description>
     <param-name>file-upload</param-name>

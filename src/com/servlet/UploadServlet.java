@@ -1,3 +1,23 @@
+/**
+ * 
+ * 
+ * Copyright (C) 2016 Anish Nath
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
 package com.servlet;
 
 import java.io.File;
@@ -33,20 +53,20 @@ public class UploadServlet extends HttpServlet {
 		InputStream is = ctx.getResourceAsStream("/upload.txt");
 
 		;
-		String s = convertStreamToString(is);
+		String s = Utils.convertStreamToString(is);
 		//System.out.println(s);
 		//request.getSession().setAttribute("XYZ", "asdsad");
 		//out.println("<pre class=\"brush: js;\"> Hello </pre>");
-		out.println(s);
+		//out.println(s);
 		//response.sendRedirect("login.jsp");
+		StringBuilder builder = new StringBuilder();
+		builder.append(s);
+		request.setAttribute("name", builder.toString());
+        request.getRequestDispatcher("/upload.jsp").forward(request, response);
 	
 
 	}
 
-	static String convertStreamToString(java.io.InputStream is) {
-		java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-		return s.hasNext() ? s.next() : "";
-	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {

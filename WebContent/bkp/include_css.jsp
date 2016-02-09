@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" type="text/css" href="css/sidebar.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="/js/googletracking.js"></script>

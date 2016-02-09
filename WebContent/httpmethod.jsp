@@ -1,59 +1,41 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Command Injection Examples</title>
-<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-<meta name="description" content="Run all the commands online">
-<meta name="keywords" content="ls,rm,netstat">
-<%@ include file="include_css.jsp" %> 
-<%@ include file="include_scripthighighlight.jsp"%>
-<script type="text/javascript">
-        $(document).ready(function() {
-            $('#executeMethod').click(function (event)
-            {
- 			$('#form').delay(200).submit()
-            });
-                    
-            $('#form').submit(function (event)
-                    {
-                    //	
-                  $('#output').html('<img src="css/images/712.GIF"> loading...');
-         			 event.preventDefault();
-                        $.ajax({
-                            type: "POST",
-                            url: "DownloadServlet", //this is my servlet
-                
-                           data: $("#form").serialize(),
-                            success: function(msg){    
-                            		    $('#output').empty();
-                                     $('#output').append(msg);
-                                     
-                            }
-                        }); 
-                    });
-        });
-   
-    </script>
+<%@include file="head.jsp" %>
+<title>HTTP TRACE,TRACK Method Enabled</title>
+
+
+
 </head>
 <body>
 
-<div id="page">
-<%@ include file="include.jsp"%>
-	<div id="loading" style="display: none;">
-		<img src="css/images/712.GIF" alt="" />Loading!
-	</div>
-	
-	   
-	<article id="contentWrapper" role="main">
-			<section id="content">
+<div id="wrap">
 
-By Doing Simple Curl We can Identify Which server is running, In the below Example we can see the sample server is running
+<%@include file="top.jsp" %>
+
+<div id="content">
+
+<div class="right">
+
+<h1>HTTP TRACE,TRACK Method Enabled</h1>
+
+<p>
+By Doing Simple Curl remote attackers can Identify Which server is running, In the below Example we can see the sample server is running
 on <b>express js </b> With HTTP Method Trace Enabled for More Information on HTTP Method Visit <a href="https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)">OWSAP HTTP</a>
+</p>
+<p>
+If the remote Web server supports the TRACE and/or TRACK HTTP methods,
+it make easier for remote attackers to steal cookies and authentication credentials
+or bypass the HttpOnly protection mechanism
+A TRACE returns the headers sent with the TRACE request to the client
+</p>
+
 <pre class="brush: js;">
 curl -v -I  http://analytics-zariga.rhcloud.com 
 </pre>
 
-The OUTOUT of the curl
+The  curl Output
 
 <pre class="brush: js;">
 * Rebuilt URL to: http://analytics-zariga.rhcloud.com/
@@ -65,29 +47,24 @@ The OUTOUT of the curl
 > Accept: */*
 > 
 < HTTP/1.1 200 OK
-HTTP/1.1 200 OK
 < Date: Mon, 01 Feb 2016 17:59:56 GMT
-Date: Mon, 01 Feb 2016 17:59:56 GMT
 < X-Powered-By: Express
-X-Powered-By: Express
 < Content-Type: text/html
-Content-Type: text/html
 < Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: *
 < Access-Control-Allow-Methods: GET,DELETE,POST,TRACE,OPTIONS,PUT,HEAD
-Access-Control-Allow-Methods: GET,DELETE,POST,TRACE,OPTIONS,PUT,HEAD
 < Access-Control-Allow-Headers: Content-Type
-Access-Control-Allow-Headers: Content-Type
 < Access-Control-Max-Age: 86400
-Access-Control-Max-Age: 86400
 < Content-Length: 75354
-Content-Length: 75354
 < Vary: Accept-Encoding
-Vary: Accept-Encoding
 </pre>
-		</section>
-		</article>
+	
+</div>
 
-	</div>
+<div class="lefttop"> </div>
+
+<%@include file="left.jsp" %>
+
+</div>
+
 </body>
 </html>

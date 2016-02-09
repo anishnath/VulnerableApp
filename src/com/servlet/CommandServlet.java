@@ -1,7 +1,28 @@
+/**
+ * 
+ * 
+ * Copyright (C) 2016 Anish Nath
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
 package com.servlet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,6 +36,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -57,6 +79,8 @@ public class CommandServlet extends HttpServlet {
 		final String methodName = request.getParameter("methodName");
 		PrintWriter out = response.getWriter();
 		final List<String> command = new ArrayList<String>();
+		
+		request.setAttribute("XYZ", "123");
 
 		if (inputText != null && !inputText.isEmpty()) {
 			inputText = inputText.trim();
@@ -91,8 +115,24 @@ public class CommandServlet extends HttpServlet {
 					// ok, wait for 30 seconds max
 					result = task.get(10, TimeUnit.SECONDS);
 					System.out.println("Finished with result: " + result);
-					out.println("<b><u>Command </b></u>= " + inputText + "<br><font size=\"3\" color=\"blue\">" + result
+					StringBuilder builder = new StringBuilder();
+					builder.append("<b><u>Command </b></u>= " + inputText + "<br><font size=\"3\" color=\"blue\">" + result
 							+ "</font><br>");
+					//out.println("<b><u>Command </b></u>= " + inputText + "<br><font size=\"3\" color=\"blue\">" + result
+						//	+ "</font><br>");
+					ServletContext ctx = getServletContext();
+					InputStream is = ctx.getResourceAsStream("/command.txt");
+
+					;
+					String s = Utils.convertStreamToString(is);
+					//System.out.println(s);
+					//request.getSession().setAttribute("XYZ", "asdsad");
+					//out.println("<pre class=\"brush: js;\"> Hello </pre>");
+					//out.println(s);
+					
+					builder.append(s);
+					request.setAttribute("name", builder.toString());
+			        request.getRequestDispatcher("/command.jsp").forward(request, response);
 				} catch (ExecutionException e) {
 					throw new RuntimeException(e);
 
@@ -107,13 +147,15 @@ public class CommandServlet extends HttpServlet {
 
 		}
 	}
+	
+
 
 	public static String doCommand(List<String> command)
 
 	{
 		StringBuilder builder = new StringBuilder();
-		System.out.println("Command  " + command.toString());
-		if(command.contains("rm") || command.contains("mv"))
+		//System.out.println("Command  " + command.toString());
+		if(command.contains("rm") || command.contains("mv") || command.contains("kill"))
 		{
 			builder.append("This command caanot be executed");
 			return builder.append("<pre class=\"brush: js;\"> Hello </pre>").toString();
@@ -143,7 +185,7 @@ public class CommandServlet extends HttpServlet {
 			System.out.println("Error " + e);
 			builder.append("<pre class=\"brush: js;\">"+ e +" </pre>").toString();
 		}
-		builder.append("<pre class=\"brush: js;\"> Command Executed </pre>").toString();
+		//builder.append("<pre class=\"brush: js;\"> Command Executed </pre>").toString();
 		return builder.toString();
 	}
 

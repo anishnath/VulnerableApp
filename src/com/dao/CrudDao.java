@@ -1,3 +1,22 @@
+/**
+ * 
+ * 
+ * Copyright (C) 2016 Anish Nath
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package com.dao;
 
 import java.io.IOException;
@@ -103,21 +122,15 @@ public class CrudDao {
 		return students;
 	}
 
-	public List<Student> getstudentByUserName(final String userName) {
-		List<Student> students = new ArrayList<Student>();
+	public List<String> getstudentByUserName(final String userName) {
+		List<String> students = new ArrayList<String>();
 
-		String query = "SELECT * FROM STUDENT where name='"+userName+ "'ORDER BY STUDENTID";
+		String query = "SELECT * FROM LOGIN where user_name='"+userName+ "'ORDER BY user_name";
 		try {
 			Statement stmt = dbConnection.createStatement();
 			ResultSet rs = stmt.executeQuery(query);
 			while (rs.next()) {
-				Student student = new Student();
-
-				student.setStudentId(rs.getInt("STUDENTID"));
-				student.setName(rs.getString("NAME"));
-				student.setDepartment(rs.getString("DEPARTMENT"));
-				student.setEmailId(rs.getString("EMAIL"));
-				students.add(student);
+				students.add(rs.getString("USER_NAME"));
 			}
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());

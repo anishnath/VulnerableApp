@@ -1,16 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
-<%
-	if (request.getSession().getAttribute("user") == null) {
-		response.sendRedirect("login.jsp");
-		return;
-	}
-%>
-<!DOCTYPE>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Cross Site Example Creating the student</title>
+<%@include file="head.jsp" %>
+<title>Cross Site Scripting(XSS)</title>
+
+
 <!-- Include one of jTable styles. -->
 <link href="css/metro/blue/jtable.css" rel="stylesheet" type="text/css" />
 <link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet"
@@ -64,26 +59,49 @@
 </head>
 <body>
 
-	<section id="body" class="width">
-		<%@ include file="left.jsp"%>
-		<section id="content" class="column-right">
+<div id="wrap">
 
-			<article>
+<%@include file="top.jsp" %>
+
+<div id="content">
+
+<div class="right">
+
+<h1>Cross Site Scripting(XSS)</h1>
+
+<p>
+In this type of attack, a remote hacker will try to inject a java scripts using HTTP GET or HTTP POST method,which when rendered in the 
+page load's, expolit's the page
+</p>
+
+<pre class="brush: js;">
+//Cross Site Scripting Example Add the following in email field
+> <script>alert(4)</script>
+//Example 2 Add this in Name filed and Save
+<<script>alert("xss");//<</script>
+</pre>
+
+		
+	<fieldset name="Output of the fieldSet">		
+
+		<h4>Create the Student</h4>
+		<div id="StudentTableContainer"></div>
+			
+	</fieldset>		
+		
+	
+
+	
+	</form>
 
 
+</div>
 
+<div class="lefttop"> </div>
 
-				<h4>Create the Student</h4>
-				<div id="StudentTableContainer"></div>
-				</div>
-			</article>
-			<%@ include file="footer.jsp"%>
+<%@include file="left.jsp" %>
 
-		</section>
-
-
-
-	</section>
+</div>
 
 </body>
 </html>

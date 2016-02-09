@@ -1,13 +1,16 @@
+
 <pre class="brush: js;">
   /**
-  * File Uploaded Successfully, Attcacker Can Upload the Virus
-  * Apply A FIle Upload POlicy On your Server for Example
-  **/
+  * File Uploaded Successfully, remote attacker Can Upload the Virus,malware or any special file
+  * which can damage the Server
+  */
    </pre>
+   <hr>
+   Mitigation 
     <pre class=\"brush: js;\">
   // Always Allow a Maximum File Size
   104857600
-  //Allowed Check for File Extensions
+  //Allowed Check for File Extensions for example
   *.gz.*.tar
   //Special Files Caution on 
   Check if the Images uploaded has proper content Type . image/jpeg

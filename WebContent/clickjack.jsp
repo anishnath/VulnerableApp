@@ -1,72 +1,88 @@
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Click Jacking Example</title>
-<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
-<meta name="description" content="The Clickjacking attack, X-Frame-Options">
-<meta name="keywords" content="clickjacking,X-Frame-Options">
-<meta name="robots" content="index,follow" />
-<meta name="googlebot" content="index,follow" />
-<meta name="resource-type" content="document" />
-<meta name="classification" content="tools" />
-<meta name="language" content="en" />
-<%@ include file="include_css.jsp" %> 
-<script type="text/javascript">
-        $(document).ready(function() {
-            $('#executeMethod').click(function (event)
-            {
- 			$('#form').delay(200).submit()
-            });
-                    
-            $('#form').submit(function (event)
-                    {
-                    //	
-                  $('#output').html('<img src="css/images/712.GIF"> loading...');
-         			 event.preventDefault();
-                        $.ajax({
-                            type: "POST",
-                            url: "CommandServlet", //this is my servlet
-                
-                           data: $("#form").serialize(),
-                            success: function(msg){    
-                            		    $('#output').empty();
-                                     $('#output').append(msg);
-                                     
-                            }
-                        }); 
-                    });
-        });
-   
-    </script>
+<%@include file="head.jsp" %>
+<title>Click jacking X-Frame-Options header option Example</title>
+
 </head>
 <body>
 
-<div id="page">
-<%@ include file="include.jsp"%>
-	<div id="loading" style="display: none;">
-		<img src="css/images/712.GIF" alt="" />Loading!
-	</div>
-	<article id="contentWrapper" role="main">
-			<section id="content">
-	<form id="form" method="POST">
-		<input type="hidden" name="methodName" id="methodName"
-			value="EXECUTECOMMAND">
-		<fieldset name="Execute Command Online">
-			<legend>
-				<B>Click Jack Example</B>
-			</legend>
-			ClickJacking Demo This type of attack occurs when a malicious site
+<div id="wrap">
+
+<%@include file="top.jsp" %>
+
+<div id="content">
+
+<div class="right">
+
+<h1>Clickjacking(X-Frame-Options header option not set) </h1>
+
+<p>ClickJacking Demo This type of attack occurs when a malicious site
 tricks a user into clicking on a concealed element of another site which they
 have loaded in a hidden frame or iframe.
-			<br>
+</p>
+
+
+
+	<form id="form" method="post">
+		<input type="hidden" name="filename" id="filename"
+			value="/temp.txt">
+		<fieldset name="Clickjacking">
+			<legend>
+				<B>Click Jack Demo</B>
+				<br>
+			</legend>
 			<input type="button" onclick="window.open('http://analytics-zariga.rhcloud.com/clickjack');" value="Click Here for Clickjack" /> <br>
 		</fieldset>
 		<div id="output"></div>
-	</form>
-		</section>
-		</article>
 		
-	</div>
+		
+		
+	</form>
+	<br><br>
+		<div id="output">
+	<fieldset name="Output of the fieldSet">		
+			
+			<pre class="brush: js;">
+			Preventing clickjacking
+=======================
+</p>>
+Modern browsers honor the `X-Frame-Options`_ HTTP header that indicates whether
+or not a resource is allowed to load within a frame or iframe. If the response
+contains the header with a value of ``SAMEORIGIN`` then the browser will only
+load the resource in a frame if the request originated from the same site. If
+the header is set to ``DENY`` then the browser will block the resource from
+loading in a frame no matter which site made the request.
+
+<p>
+Browsers that support X-Frame-Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</p>
+* Internet Explorer 8+
+* Firefox 3.6.9+
+* Opera 10.5+
+* Safari 4+
+* Chrome 4.1+
+                  
+ </pre>
+			
+	</fieldset>		
+		</div>
+	
+
+	
+	</form>
+
+
+</div>
+
+<div class="lefttop"> </div>
+
+<%@include file="left.jsp" %>
+
+</div>
+
 </body>
 </html>
