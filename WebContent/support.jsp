@@ -1,36 +1,57 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<div class="left">
-
-<h3>Navigation</h3>
-<ul>
-		    <li><a href="command.jsp"><font size="2px">Command Injection</font></a></li>
-            <li><a href="command-injection.jsp"><font size="2px">Command Injection File Download</font> </a></li>
-            <li><a href="upload.jsp"><font size="2px">Unrestrcited File Upload </font></a></li>
-            <li><a href="cross-site.jsp"><font size="2px">Cross Site Scripting (XSS)</font></a></li>
-            <li><a href="csrftest.jsp"><font size="2px">Cross Site Request Forgery (CSRF) </font> </a></li>
-            <li><a href="clickjack.jsp"><font size="2px">ClickJacking </font> </a></li>
-            <li><a href="informationleakage.jsp"><font size="2px">Information Leakage </font> </a></li>
-            <li><a href="httpmethod.jsp"><font size="2px">HTTP TRACE/TRACK Method</font> </a></li>
-            <li><a href="/HTTPOnly"><font size="2px">HttpOnly Flag Cookie Protection</font> </a></li>
-            <li><a href="sqlinjection1.jsp"><font size="2px">SQL Injection</font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">LDAP Injection<small>*</small></font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">XML Injection<small>*</small></font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">XPATH Injection<small>*</small></font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">Heartbleed check<small>*</small></font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">Poddle Check<small>*</small></font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">CVE Testing<small>*</small></font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">Buffer/Integer Overflow<small>*</small></font> </a></li>  </li>
-            <li><a href="preview.jsp"><font size="2px">XSS/XML Validation Overflow<small>*</small></font> </a></li>  </li>
-			
-</ul>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
 
 
-<h3>Support</h3>
+<%@include file="head.jsp" %>
 
-	
+<title>The Vulnerable Web Application</title>
 
-	
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1668399950109875',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</head>
+<body>
+
+<div id="wrap">
+
+<%@include file="top.jsp" %>
+
+<div id="content">
+
+<div class="right">
+
+<h1>Your Support Needed</h1>
+
+<p>
+Vulnerable Web Application is available for all the white hat hacker who want to gain expertise in Web Application Security, by covering owsap top 10 and many more practical example 
+Support This Application, to bring more example (LDAP Injection,SSL Poddles,Heartbleed,Appserver vulnerabilty,Scanners,nmap,ZenMAP,CVE Tester)<br>
+Currently this is running on Server Which billed every Month Your contribution Will help this website Keep and running <br>
+	The Contribution will bring more practical Examples which will eventually enhance your skill on the Practical security Learning
+</p>
+
+<p>
+
+To Support you can also Share Like in Facebook
+
+</p>
+
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <table>
@@ -41,16 +62,15 @@
 <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
-</div>
 
-<div class="leftbottom"> </div>
-
-<div style="clear: both;"> </div>
-<%@include file="disqus.jsp" %>
-<div id="footer">
-
-<div class="footerleft">Copyright &copy; 2016 by <a href="#"></a> | <a href="#">Privacy Policy</a> | <a href="#">Copyright</a></div>
-<div style="clear: both;"> </div>
 
 </div>
 
+<div class="lefttop"> </div>
+
+<%@include file="left.jsp" %>
+
+</div>
+
+</body>
+</html>
