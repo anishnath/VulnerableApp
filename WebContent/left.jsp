@@ -6,7 +6,7 @@
 <ul>
 		    <li><a href="command.jsp"><font size="2px">Command Injection</font></a></li>
             <li><a href="command-injection.jsp"><font size="2px">Command Injection File Download</font> </a></li>
-            <li><a href="upload.jsp"><font size="2px">Unrestrcited File Upload </font></a></li>
+            <li><a href="upload.jsp"><font size="2px">Unrestricted File Upload </font></a></li>
             <li><a href="cross-site.jsp"><font size="2px">Cross Site Scripting (XSS)</font></a></li>
             <li><a href="csrftest.jsp"><font size="2px">Cross Site Request Forgery (CSRF) </font> </a></li>
             <li><a href="clickjack.jsp"><font size="2px">ClickJacking </font> </a></li>
