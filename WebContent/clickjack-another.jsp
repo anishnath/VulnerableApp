@@ -5,6 +5,7 @@
 
 
 <%@include file="head.jsp" %>
+<%@include file="/js/googletracking.js" %>
 
 <title>Click Jack Example</title>
 </head>

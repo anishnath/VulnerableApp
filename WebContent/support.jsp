@@ -5,6 +5,7 @@
 
 
 <%@include file="head.jsp" %>
+<%@include file="/js/googletracking.js" %>
 
 <title>The Vulnerable Web Application</title>
 

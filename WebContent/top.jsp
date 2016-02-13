@@ -23,7 +23,7 @@
 <div id="menu"> 
 <ul>
 <li><a href="index.jsp">Home</a></li>
-<li><a href="contactus.jsp">Contactus</a></li>
+<li><a href="contactus.jsp">Contact us</a></li>
 <li><a href="support.jsp">Support</a></li>
 </ul>
 </div>
@@ -35,5 +35,5 @@
   data-show-faces="true">
 </div>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="anish2good" data-hashtags="owsap,pentesting,security,websecurity,appscan">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="anish2good" data-hashtags="owsap,pentesting,security,websecurity,appscan,hacking">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

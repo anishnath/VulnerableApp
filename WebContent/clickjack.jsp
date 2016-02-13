@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <%@include file="head.jsp" %>
+<%@include file="/js/googletracking.js" %>
 <title>Click jacking X-Frame-Options header option Example</title>
 
 </head>

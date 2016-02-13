@@ -1,0 +1,16 @@
+https://goo.gl/6Cacfn
+
+A SQL injection inserts a SQL query via the input data from the client to the application.
+A successful SQL inserts  can read sensitive data from the database modify database data 
+(Insert/Update/Delete) and ability to execute administration operations on the DB
+
+sql injection
+sql injection tutorial
+sql injection step by step
+sql injection demo
+sql injection bypass login
+blind sql injection 
+sql injection explained
+
+
+#SQL #Security #Hacking #Vulnerability #CyberSecurity #Hackers #XSS #Infosec #Vulnerabilities #Hacked #Joomla #Hack #Infosec #WebSecurity
