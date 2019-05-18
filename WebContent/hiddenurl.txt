@@ -1,4 +1,0 @@
-#The application might be configure to server the hidden URL
-#Make Sure application have proper Authentication and Authorization in Place
-For Example	
-http://zariga.com/services/StudentSrv?WSDL
