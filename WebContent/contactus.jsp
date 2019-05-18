@@ -27,11 +27,7 @@ Tweet to Contact
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="anish2good" data-hashtags="owsap,pentesting,security,websecurity,appscan,hacking">Tweet to Contact</a>
 </p>
 
-<p>
-Video Tutorial Examples <br>
-<iframe width="200" height="200" src="https://www.youtube.com/embed/videoseries?list=PLrUFyg1unBb9W1KKyy1fn_bXOwGhgIbbq" frameborder="0" allowfullscreen></iframe>
-<br>
-</p>
+
 </div>
 
 <div class="lefttop"> </div>

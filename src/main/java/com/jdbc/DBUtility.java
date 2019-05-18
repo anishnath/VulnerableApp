@@ -67,8 +67,8 @@ public class DBUtility {
 			Class.forName("com.mysql.jdbc.Driver");
 			//System.out.println("--------------------------");
 			//System.out.println("DRIVER: " + driver);
-			connection = DriverManager.getConnection("jdbc:mysql://127.12.156.2:3306/zarigatongy?autoReconnect=true", username, password);
-			//connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/zarigatongy", username, password);
+			//connection = DriverManager.getConnection("jdbc:mysql://127.12.156.2:3306/zarigatongy?autoReconnect=true", username, password);
+			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/zarigatongy?autoReconnect=true", username, password);
 			System.out.println("CONNECTION: " + connection);
 
 			return connection;
