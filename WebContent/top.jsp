@@ -1,6 +1,6 @@
 <div id="header">
 <h1><a href="#">The Vulnerable Web Application</a></h1>
-<h2>Become the Web security expert </h2>
+<h2>Become the Web security expert, feel free to hack anything and post in commnet plugin, I will add your use case </h2>
 </div>
 
 <script>
@@ -25,6 +25,7 @@
 <li><a href="index.jsp">Home</a></li>
 <li><a href="contactus.jsp">Contact us</a></li>
 <li><a href="support.jsp">Support</a></li>
+<li><a href="8gwifi.org">Cryptography Playground</a></li>
 </ul>
 </div>
 

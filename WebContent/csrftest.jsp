@@ -38,7 +38,7 @@ using the credentials of a logged-in user who visits the malicious site in their
 				<br>
 			</legend>
 			<br>
-			<input type="button" onclick="window.open('http://analytics-zariga.rhcloud.com/csrf');" value="Click Here for CSRF" /> <br>
+			<input type="button" onclick="window.open('http://47.254.66.26/csrf.html');" value="Click Here for CSRF" /> <br>
 		</fieldset>
 		<div id="output"></div>
 		
