@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://zariga.com/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/index.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/contactus.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/support.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/command.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/command-injection.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/upload.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/cross-site.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/csrftest.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/clickjack.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/informationleakage.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/httpmethod.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/HTTPOnly</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/sqlinjection1.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://zariga.com/preview.jsp</loc>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>

@@ -1,0 +1,10 @@
+#if you are viewing this page then you are exposed by the google 
+# Check the robots.txt file and disallow the agents
+#https://goo.gl/0XgxPa
+site:zariga.com intitle:index.of
+site:zariga.com ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini
+site:zariga.com ext:sql | ext:dbf | ext:mdb
+site:zariga.com ext:log
+site:zariga.com ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup
+site:zariga.com intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"
+site:zariga.com ext:txt | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv
