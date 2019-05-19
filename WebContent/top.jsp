@@ -25,7 +25,7 @@
 <li><a href="index.jsp">Home</a></li>
 <li><a href="contactus.jsp">Contact us</a></li>
 <li><a href="support.jsp">Support</a></li>
-<li><a href="8gwifi.org">Cryptography Playground</a></li>
+<li><a href="https://8gwifi.org">Cryptography Playground</a></li>
 <li><a href="https://www.linkedin.com/in/anishnath/">Hire Me</a></li>
 </ul>
 </div>
